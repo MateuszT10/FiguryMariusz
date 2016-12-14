@@ -12,12 +12,12 @@ public class Main {
     float sumapoltrojkatow=0;
 
     public List<String>  nazwafigury = new ArrayList<String>();
-    public List<Float>   polefigury = new ArrayList<Float>();
-    public List<Float>   cechafigury = new ArrayList<Float>();
+    public List<String>   polefigury = new ArrayList<String>();
+    public List<String>  cechafigury = new ArrayList<String>();
 
     public static void main(String[] args) {
         Main obiekt = new Main();
-        obiekt.losowanie(5);
+        obiekt.losowanie(10);
     }
 
 
@@ -34,8 +34,8 @@ public class Main {
                 case 0:
                     figury.add(new Kwadrat(losowanie.nextFloat()));
                     nazwafigury.add("Kwadrat");
-                    polefigury.add(figury.get(i).pole);
-                    cechafigury.add(figury.get(i).przekatna);
+                    polefigury.add(String.format("%.3f",figury.get(i).pole));
+                    cechafigury.add(String.format("%.3f",figury.get(i).przekatna));
                     sumapolkwadratow += figury.get(i).getpole();
                     System.out.format("Kwadrat o polu %.3f i przekatnej %.3f\n", figury.get(i).pole, figury.get(i).przekatna);
                     break;
@@ -43,8 +43,8 @@ public class Main {
                 case 1:
                     figury.add(new Trojkat(losowanie.nextFloat()));
                     nazwafigury.add("Trojkat");
-                    polefigury.add(figury.get(i).pole);
-                    cechafigury.add(figury.get(i).wysokosc);
+                    polefigury.add(String.format("%.3f",figury.get(i).pole));
+                    cechafigury.add(String.format("%.3f",figury.get(i).wysokosc));
                     sumapoltrojkatow += figury.get(i).getpole();
                     System.out.format("Trojkat o polu %.3f i wysokosci %.3f\n", figury.get(i).pole, figury.get(i).wysokosc);
                     break;
@@ -52,8 +52,8 @@ public class Main {
                 case 2:
                     figury.add(new Kolo(losowanie.nextFloat()));
                     nazwafigury.add("Kolo");
-                    polefigury.add(figury.get(i).pole);
-                    cechafigury.add(figury.get(i).srednica);
+                    polefigury.add(String.format("%.3f",figury.get(i).pole));
+                    cechafigury.add(String.format("%.3f",figury.get(i).srednica));
                     sumapolkol += figury.get(i).getpole();
                     System.out.format("Kolo o polu %.3f i srednicy %.3f\n", figury.get(i).pole, figury.get(i).srednica);
                     break;

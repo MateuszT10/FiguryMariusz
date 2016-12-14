@@ -23,13 +23,18 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista);
-        setContentView(R.layout.activity_lista);
         Main obiekt = new Main(); //obiekt klasy program
+        int N = 5;
 
-        obiekt.losowanie(5); // losujemy N figur
+        obiekt.losowanie(N); // losujemy N figur
         //String[] stringi= new String[45]; // lista wszystkich figur wraz z cechami i polami
         ArrayList<String> stringi = new ArrayList<String>();
-        stringi.add(obiekt.nazwafigury)
+        for(int i=0; i<N;i++){
+            stringi.add(obiekt.nazwafigury.get(i));
+            stringi.add(obiekt.cechafigury.get(i));
+            stringi.add(obiekt.polefigury.get(i));
+        }
+        //stringi.add(obiekt.nazwafigur)
         // zaadaptowana do wyswietlania w grid
 
 //        for(int i = 0; i< 45; i++ ){

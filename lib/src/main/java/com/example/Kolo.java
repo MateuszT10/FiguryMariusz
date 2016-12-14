@@ -12,6 +12,7 @@ public class Kolo extends Figura {
 
     public void obliczpole(float promien){
         pole = (float)Math.PI * (float)Math.pow(promien,2);
+        obliczceche(promien);
     }
 
     public void obliczceche(float promien){
