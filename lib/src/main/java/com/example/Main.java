@@ -34,28 +34,28 @@ public class Main {
                 case 0:
                     figury.add(new Kwadrat(losowanie.nextFloat()));
                     nazwafigury.add("Kwadrat");
-                    polefigury.add(figury[i].pole);
-                    cechafigury.add(figury[i].przekatna);
-                    sumapolkwadratow += figury[i].getpole();
-                    System.out.format("Kwadrat o polu %.3f i przekatnej %.3f\n", figury[i].pole, figury[i].przekatna);
+                    polefigury.add(figury.get(i).pole);
+                    cechafigury.add(figury.get(i).przekatna);
+                    sumapolkwadratow += figury.get(i).getpole();
+                    System.out.format("Kwadrat o polu %.3f i przekatnej %.3f\n", figury.get(i).pole, figury.get(i).przekatna);
                     break;
 
                 case 1:
-                    figury[i] = new Trojkat(losowanie.nextFloat());
+                    figury.add(new Trojkat(losowanie.nextFloat()));
                     nazwafigury.add("Trojkat");
-                    polefigury.add(figury[i].pole);
-                    cechafigury.add(figury[i].wysokosc);
-                    sumapoltrojkatow += figury[i].getpole();
-                    System.out.format("Trojkat o polu %.3f i wysokosci %.3f\n", figury[i].pole, figury[i].wysokosc);
+                    polefigury.add(figury.get(i).pole);
+                    cechafigury.add(figury.get(i).wysokosc);
+                    sumapoltrojkatow += figury.get(i).getpole();
+                    System.out.format("Trojkat o polu %.3f i wysokosci %.3f\n", figury.get(i).pole, figury.get(i).wysokosc);
                     break;
 
                 case 2:
-                    figury[i] = new Kolo(losowanie.nextFloat());
+                    figury.add(new Kolo(losowanie.nextFloat()));
                     nazwafigury.add("Kolo");
-                    polefigury.add(figury[i].pole);
-                    cechafigury.add(figury[i].srednica);
-                    sumapolkol += figury[i].getpole();
-                    System.out.format("Kolo o polu %.3f i srednicy %.3f\n", figury[i].pole, figury[i].srednica);
+                    polefigury.add(figury.get(i).pole);
+                    cechafigury.add(figury.get(i).srednica);
+                    sumapolkol += figury.get(i).getpole();
+                    System.out.format("Kolo o polu %.3f i srednicy %.3f\n", figury.get(i).pole, figury.get(i).srednica);
                     break;
 
             }
