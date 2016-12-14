@@ -24,10 +24,11 @@ public class Main {
 
     void losowanie(){
         Random losowanie = new Random();
-             List<Integer> wybor = new ArrayList<Integer>();
-             wybor.add(losowanie.nextInt(3)); //wylosowanie rodzaju figury
+        List<Integer> wybor = new ArrayList<Integer>();
+        for(int i = 0; i < N; i++) {
+            wybor.add(losowanie.nextInt(3)); //wylosowanie rodzaju figury
             //losowanie figur, 0-kwadrat, 1-trojkat, 2-kolo
-
+        }
 
         for(int i=0; i<N; i++){
             switch(wybor.get(i)){
@@ -37,7 +38,7 @@ public class Main {
                     polefigury.add(figury[i].pole);
                     cechafigury.add(figury[i].przekatna);
                     sumapolkwadratow += figury[i].getpole();
-                    System.out.format("Kwadrat o polu %0.3f i przekatnej %0.3f", figury[i].pole, figury[i].przekatna);
+                    System.out.format("Kwadrat o polu %.3f i przekatnej %.3f\n", figury[i].pole, figury[i].przekatna);
                     break;
 
                 case 1:
@@ -46,7 +47,7 @@ public class Main {
                     polefigury.add(figury[i].pole);
                     cechafigury.add(figury[i].wysokosc);
                     sumapoltrojkatow += figury[i].getpole();
-                    System.out.format("Trojkat o polu %0.3f i wysokosci %0.3f", figury[i].pole, figury[i].wysokosc);
+                    System.out.format("Trojkat o polu %.3f i wysokosci %.3f\n", figury[i].pole, figury[i].wysokosc);
                     break;
 
                 case 2:
@@ -55,7 +56,7 @@ public class Main {
                     polefigury.add(figury[i].pole);
                     cechafigury.add(figury[i].srednica);
                     sumapolkol += figury[i].getpole();
-                    System.out.format("Kolo o polu %0.3f i srednicy %0.3f", figury[i].pole, figury[i].srednica);
+                    System.out.format("Kolo o polu %.3f i srednicy %.3f\n", figury[i].pole, figury[i].srednica);
                     break;
 
             }
