@@ -24,10 +24,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista);
         setContentView(R.layout.activity_lista);
-        Main program = new Main(); //obiekt klasy program
+        Main obiekt = new Main(); //obiekt klasy program
 
-
-        String[] stringi= new String[45]; // lista wszystkich figur wraz z cechami i polami
+        obiekt.losowanie(5); // losujemy N figur
+        //String[] stringi= new String[45]; // lista wszystkich figur wraz z cechami i polami
+        ArrayList<String> stringi = new ArrayList<String>();
         // zaadaptowana do wyswietlania w grid
 
 //        for(int i = 0; i< 45; i++ ){
@@ -47,12 +48,9 @@ public class MainActivity extends AppCompatActivity {
 //                    break;
 //            }
 //        }
-        List<String> values=new ArrayList<String>(Arrays.asList(stringi));
-
-
         GridView myGrid=(GridView)findViewById(R.id.grid);
 
-        myGrid.setAdapter(new ArrayAdapter<String>(this,R.layout.cell,values));
+        myGrid.setAdapter(new ArrayAdapter<String>(this,R.layout.cell,stringi));
     }
 
     @Override

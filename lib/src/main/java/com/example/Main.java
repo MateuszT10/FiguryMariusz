@@ -6,23 +6,22 @@ import java.util.Random;
 
 public class Main {
 
-    Integer N = 10;
     Figura[] figury = new Figura[N];
     float sumapolkwadratow=0;
     float sumapolkol=0;
     float sumapoltrojkatow=0;
 
-    public List<String>   nazwafigury = new ArrayList<String>();
+    public List<String>  nazwafigury = new ArrayList<String>();
     public List<Float>   polefigury = new ArrayList<Float>();
     public List<Float>   cechafigury = new ArrayList<Float>();
 
     public static void main(String[] args) {
         Main obiekt = new Main();
-        obiekt.losowanie();
+        obiekt.losowanie(5);
     }
 
 
-    void losowanie(){
+    public void losowanie(int N){
         Random losowanie = new Random();
         List<Integer> wybor = new ArrayList<Integer>();
         for(int i = 0; i < N; i++) {
