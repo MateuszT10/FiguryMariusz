@@ -24,36 +24,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista);
         Main obiekt = new Main(); //obiekt klasy program
-        int N = 5;
+        int N = 15;
 
         obiekt.losowanie(N); // losujemy N figur
-        //String[] stringi= new String[45]; // lista wszystkich figur wraz z cechami i polami
         ArrayList<String> stringi = new ArrayList<String>();
-        for(int i=0; i<N;i++){
+        for(int i=0; i< N;i++){
             stringi.add(obiekt.nazwafigury.get(i));
             stringi.add(obiekt.cechafigury.get(i));
             stringi.add(obiekt.polefigury.get(i));
         }
-        //stringi.add(obiekt.nazwafigur)
-        // zaadaptowana do wyswietlania w grid
-
-//        for(int i = 0; i< 45; i++ ){
-//            int nWiersz = i % 3;
-//            int nKolumna = i / 3;
-//            switch(nWiersz) {
-//                case 0:
-//                    stringi[i] = program.jakaFigura[nKolumna];
-//                    break;
-//                case 1:
-//                    stringi[i] = program.polaFigur[nKolumna];
-//                    break;
-//                case 2:
-//                    stringi[i] = program.cechaFigur[nKolumna];
-//                    break;
-//                default:
-//                    break;
-//            }
-//        }
         GridView myGrid=(GridView)findViewById(R.id.grid);
 
         myGrid.setAdapter(new ArrayAdapter<String>(this,R.layout.cell,stringi));
