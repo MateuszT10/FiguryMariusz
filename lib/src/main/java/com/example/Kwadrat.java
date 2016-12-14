@@ -3,20 +3,20 @@ import java.lang.Math;
 
 public class Kwadrat extends Figura {
 
-    double bok;
+    float bok;
 
-    public Kwadrat(double bok){
+    public Kwadrat(float bok){
         this.bok = bok;
         obliczceche(bok);
         obliczpole(bok);
     }
 
-    public void obliczpole(double bok){
-        pole = Math.pow(bok,2);
+    public void obliczpole(float bok){
+        pole = (float)Math.pow(bok,2);
     }
 
-    public void obliczceche(double bok){
-        przekatna = bok * Math.sqrt(2);
+    public void obliczceche(float bok){
+        przekatna = bok * (float)Math.sqrt(2);
     }
 
 

@@ -12,11 +12,11 @@ public class Trojkat extends Figura {
     }
 
     public void obliczpole(double bok){
-        pole = ( Math.pow(bok,2) * Math.sqrt(3) ) / 4;
+        pole = (float)( Math.pow(bok,2) * Math.sqrt(3) ) / 4;
     }
 
     public void obliczceche(double bok){
-        wysokosc = ( bok * Math.sqrt(3) ) / 2;
+        wysokosc = (float)( bok * Math.sqrt(3) ) / 2;
     }
 
 }

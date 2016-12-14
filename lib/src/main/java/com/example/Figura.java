@@ -1,10 +1,10 @@
 package com.example;
 
 public abstract class Figura {
-    double pole;
-    double przekatna;
-    double wysokosc;
-    double srednica;
+    float pole;
+    float przekatna;
+    float wysokosc;
+    float srednica;
 
     public Figura(){
     }

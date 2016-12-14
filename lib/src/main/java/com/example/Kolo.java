@@ -3,18 +3,18 @@ import java.lang.Math;
 
 public class Kolo extends Figura {
 
-    double promien;
+    float promien;
 
-    public Kolo(double promien){
+    public Kolo(float promien){
         this.promien = promien;
         obliczpole(promien);
     }
 
-    public void obliczpole(double promien){
-        pole = Math.PI * Math.pow(promien,2);
+    public void obliczpole(float promien){
+        pole = (float)Math.PI * (float)Math.pow(promien,2);
     }
 
-    public void obliczceche(double promien){
+    public void obliczceche(float promien){
         srednica = promien * 2;
     }
 

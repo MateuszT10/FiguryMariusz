@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_lista);
         setContentView(R.layout.activity_lista);
         Main program = new Main(); //obiekt klasy program
 
@@ -30,23 +30,23 @@ public class MainActivity extends AppCompatActivity {
         String[] stringi= new String[45]; // lista wszystkich figur wraz z cechami i polami
         // zaadaptowana do wyswietlania w grid
 
-        for(int i = 0; i< 45; i++ ){
-            int nWiersz = i % 3;
-            int nKolumna = i / 3;
-            switch(nWiersz) {
-                case 0:
-                    stringi[i] = program.jakaFigura[nKolumna];
-                    break;
-                case 1:
-                    stringi[i] = program.polaFigur[nKolumna];
-                    break;
-                case 2:
-                    stringi[i] = program.cechaFigur[nKolumna];
-                    break;
-                default:
-                    break;
-            }
-        }
+//        for(int i = 0; i< 45; i++ ){
+//            int nWiersz = i % 3;
+//            int nKolumna = i / 3;
+//            switch(nWiersz) {
+//                case 0:
+//                    stringi[i] = program.jakaFigura[nKolumna];
+//                    break;
+//                case 1:
+//                    stringi[i] = program.polaFigur[nKolumna];
+//                    break;
+//                case 2:
+//                    stringi[i] = program.cechaFigur[nKolumna];
+//                    break;
+//                default:
+//                    break;
+//            }
+//        }
         List<String> values=new ArrayList<String>(Arrays.asList(stringi));
 
 
