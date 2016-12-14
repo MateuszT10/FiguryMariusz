@@ -6,7 +6,7 @@ import java.util.Random;
 
 public class Main {
 
-    Figura[] figury = new Figura[N];
+    List<Figura> figury = new ArrayList<>();
     float sumapolkwadratow=0;
     float sumapolkol=0;
     float sumapoltrojkatow=0;
@@ -32,7 +32,7 @@ public class Main {
         for(int i=0; i<N; i++){
             switch(wybor.get(i)){
                 case 0:
-                    figury[i] = new Kwadrat(losowanie.nextFloat());
+                    figury.add(new Kwadrat(losowanie.nextFloat()));
                     nazwafigury.add("Kwadrat");
                     polefigury.add(figury[i].pole);
                     cechafigury.add(figury[i].przekatna);

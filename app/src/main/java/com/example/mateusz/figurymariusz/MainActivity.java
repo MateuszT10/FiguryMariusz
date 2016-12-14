@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         obiekt.losowanie(5); // losujemy N figur
         //String[] stringi= new String[45]; // lista wszystkich figur wraz z cechami i polami
         ArrayList<String> stringi = new ArrayList<String>();
+        stringi.add(obiekt.nazwafigury)
         // zaadaptowana do wyswietlania w grid
 
 //        for(int i = 0; i< 45; i++ ){
