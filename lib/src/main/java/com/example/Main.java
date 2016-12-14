@@ -11,8 +11,8 @@ public class Main {
     double sumapoltrojkatow=0;
 
     public String[] nazwafigury = new String[N];
-    public String[] polefigury = new String[N];
-    public String[] cechafigury = new String[N];
+    public Float[] polefigury = new Float[N];
+    public Float[] cechafigury = new Float[N];
 
     public static void main(String[] args) {
         Main obiekt = new Main();
